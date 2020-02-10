@@ -1,0 +1,38 @@
+{
+  "name": "gestaotalentos",
+  "version": "1.0.0",
+  "description": "Sistema desenvolvido para gerenciar estagiarios.",
+  "main": "index.js",
+  "repository": "https://github.com/gribeiros/gest-otalentos.git",
+  "author": "Gustavo R. Silva & Raphael M. Freitas",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start":"nodemon src/server.js"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.1.0",
+    "husky": "^4.2.1",
+    "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  }
+}
