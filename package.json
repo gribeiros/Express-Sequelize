@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sistema desenvolvido para gerenciar estagiarios.",
   "main": "index.js",
-  "repository": "https://github.com/gribeiros/gest-otalentos.git",
+  "repository": "https://github.com/gribeiros/gestaotalentos.git",
   "author": "Gustavo R. Silva & Raphael M. Freitas",
   "license": "MIT",
   "private": true,
