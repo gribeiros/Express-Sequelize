@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 class associated extends Model {
   static init(sequelize) {
     super.init({
-      mastricula: DataTypes.STRING,
+      matricula: DataTypes.STRING,
       data_admissao: DataTypes.DATE,
       termino_contrato: DataTypes.DATE,
       email: DataTypes.STRING,
@@ -17,13 +17,13 @@ class associated extends Model {
         sequelize
       })
   }
-  static associate(model) {
-    this.belongsTo(model.Pessoa, { foreignKey: 'id', as: 'pessoa_id' });
-    this.belongsTo(model.Cargo, { foreignKey: 'id', as: 'cargo_id' });
-    this.belongsTo(model.Gestor, { foreignKey: 'id', as: 'gestor_id' });
-    this.belongsTo(model.Atividade, { foreignKey: 'id', as: 'atividades_id' });
-    this.belongsTo(model.Avalicao, { foreignKey: 'id', as: 'avalicoes_id' });
-    this.belongsTo(model.Conhecimento, { foreignKey: 'id', as: 'conhecimentos_id' })
+  static associate(models) {
+    this.belongsTo(models.pessoas, { foreignKey: 'pessoa_id', as: 'pessoa' });
+    this.belongsTo(models.cargos, { foreignKey: 'cargo_id', as: 'cargo' });
+    this.belongsTo(models.gestores, { foreignKey: 'gestor_id', as: 'gestor' });
+    this.belongsTo(models.atividades, { foreignKey: 'atividades_id', as: 'atividades' });
+    this.belongsTo(models.avaliacoes, { foreignKey: 'avaliacoes_id', as: 'avaliacoes' });
+    this.belongsTo(models.conhecimentos, { foreignKey: 'conhecimentos_id', as: 'conhecimentos' });
   }
 }
 

@@ -9,6 +9,9 @@ class avaliacoes extends Model {
         sequelize,
       })
   }
+  static associate(models) {
+    this.hasMany(models.associated, { foreignKey: 'avaliacoes_id', as: 'avaliacoes' });
+  }
 }
 
 module.exports = avaliacoes;

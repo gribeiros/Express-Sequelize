@@ -7,8 +7,6 @@ const app = express();
 
 const port = 8030;
 
-
-
 app.use(express.json());
 app.use(routes);
 

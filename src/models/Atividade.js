@@ -10,6 +10,9 @@ class atividades extends Model {
       sequelize
     })
   }
+  static associate(models){
+    this.hasMany(models.associated, { foreignKey: 'atividades_id', as: 'atividades' });
+  }
 }
 
 module.exports = atividades;

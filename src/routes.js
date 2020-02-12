@@ -6,6 +6,7 @@ const ConhecimentoController = require('./controllers/ConhecimentoController');
 const AtividadeController = require('./controllers/AtividadeController')
 const GestorController = require('./controllers/GestorController')
 const PessoaController = require('./controllers/PessoaController')
+const AssociadoController = require('./controllers/AsssociadoController');
 
 const routes = express.Router();
 
@@ -27,9 +28,11 @@ routes.post('/gestores', GestorController.store);
 routes.get('/pessoas', PessoaController.index);
 routes.post('/pessoas', PessoaController.store);
 
+routes.get('/associados', AssociadoController.index);
+routes.post('/pessoas/:pessoa_id/associados', AssociadoController.store);
 
 routes.get('/', (req, res) => {
-  res.send("OK");
+  res.json({ POKEBOLA: 'PIKACHU' });
 })
 
 

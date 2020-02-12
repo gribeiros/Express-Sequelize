@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('associated', {
+    return queryInterface.createTable('associateds', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
