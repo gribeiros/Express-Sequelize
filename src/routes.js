@@ -32,7 +32,7 @@ routes.get('/associados', AssociadoController.index);
 routes.post('/pessoas/:pessoa_id/associados', AssociadoController.store);
 
 routes.get('/', (req, res) => {
-  res.json({ POKEBOLA: 'PIKACHU' });
+  res.json({ MyCreator: 'Gustavo R. Silva' });
 })
 
 
